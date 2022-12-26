@@ -1,3 +1,12 @@
+// CRIANDO FUNÇÃO DE VALIDAÇÃO DE ERRO!
+function validateInput(inputVar, imageVar) {
+  if (!inputVar) {
+    imageVar.css('display', 'block');
+  } else {
+    imageVar.css('display', 'none');
+  }
+}
+
 $(document).ready(function () {
   $('#btn').click(function (e) {
     e.preventDefault();
@@ -14,28 +23,9 @@ $(document).ready(function () {
     var iconErrorImgEmail = $('#iconErrorEmail');
     var iconErrorImgPassword = $('#iconErrorPassword');
 
-    if (!inputErrorName) {
-      iconErrorImgName.css('display', 'block');
-    } else {
-      iconErrorImgName.css('display', 'none');
-    }
-
-    if (!inputErrorLastName) {
-      iconErrorImgLastName.css('display', 'block');
-    } else {
-      iconErrorImgLastName.css('display', 'none');
-    }
-
-    if (!inputErrorEmail) {
-      iconErrorImgEmail.css('display', 'block');
-    } else {
-      iconErrorImgEmail.css('display', 'none');
-    }
-
-    if (!inputErrorPassword) {
-      iconErrorImgPassword.css('display', 'block');
-    } else {
-      iconErrorImgPassword.css('display', 'none');
-    }
+    validateInput(inputErrorName, iconErrorImgName);
+    validateInput(inputErrorLastName, iconErrorImgLastName);
+    validateInput(inputErrorEmail, iconErrorImgEmail);
+    validateInput(inputErrorPassword, iconErrorImgPassword);
   });
 });
