@@ -1,0 +1,164 @@
+/* 
+  FONT-FAMILY 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* 
+  COLOURS
+*/
+:root {
+  --red: hsl(0, 99%, 62%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+/*
+  RESET  
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../images/bg-intro-desktop.png);
+  background-color: var(--red);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* 
+  INFO
+*/
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info .title {
+  color: #fff;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.info .info-paragraph {
+  color: #fff;
+}
+
+/*
+  CONTENT
+*/
+.content {
+  width: 500px;
+}
+
+.content .trial .span-bold {
+  background-color: var(--blue);
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  color: #fff;
+  box-shadow: 0 7px 5px rgba(0, 0, 0, 0.34);
+}
+
+.span-bold span {
+  font-weight: bold;
+}
+
+.form-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+/*
+  INPUT
+*/
+.input-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid var(--grayish-blue);
+  position: relative;
+}
+
+.input-form input:focus {
+  border-color: var(--dark-blue);
+  border-radius: 4px;
+}
+
+.input-form input[type] {
+  padding-left: 25px;
+}
+
+.input-form {
+  position: relative;
+}
+
+.input-form .icon {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  display: none;
+}
+
+.form-content .form #btn {
+  width: 100%;
+  background-color: rgb(75, 200, 75);
+  border: none;
+  border-radius: 4px;
+  padding: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.form-content .form .btn:hover {
+  background-color: var(--green);
+}
+
+.form-content .agreement {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  text-align: center;
+  color: var(--grayish-blue);
+  font-size: 0.7rem;
+}
+
+.form-content .agreement a {
+  text-decoration: none;
+  color: var(--red);
+  font-weight: bold;
+}
